@@ -106,6 +106,25 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
+    describe('Initial Entries', function() {
+
+      beforeEach (function (done) {
+
+        // Waiting for 'done' function to run before continuing
+        // with tests -> waiting for asynchronous code to be executed
+        loadFeed(0, done);
+      });
+
+      // Ensures that when the LoadFeed function is called and completed its work,
+      // there is at least a single .entry element within the .feed container
+      it('the LoadFeed function was called and completed its work. The .feed container is not empty', function () {
+
+        const feedContainer = document.querySelector('.feed');
+        expect(feedContainer.childNodes.length).toBeGreaterThan(0);
+      });
+    });
+
+
     /* TODO: Write a new test suite named "New Feed Selection" */
 
         /* TODO: Write a test that ensures when a new feed is loaded
