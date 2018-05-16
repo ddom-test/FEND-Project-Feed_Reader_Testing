@@ -32,7 +32,7 @@ $(function() {
          * and that the URL is not empty.
          */
 
-         it('all URLs are defined and not empty', function () {
+         it('URLs are defined and not empty', function () {
 
            allFeeds.forEach(function (el) {
 
@@ -47,7 +47,7 @@ $(function() {
          * and that the name is not empty.
          */
 
-         it('all names are defined and not empty', function () {
+         it('names are defined and not empty', function () {
 
            allFeeds.forEach(function (el) {
 
@@ -71,6 +71,31 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+
+    describe('The menu', function() {
+
+      // Ensures the menu element is hidden by default
+      it('element is hidden by default', function() {
+          let body = document.querySelector('body');
+
+          expect(body.className).toContain('menu-hidden');
+      });
+
+      // Ensures that the menu changes visibility
+      // when the menu icon is clicked and does it hide
+      // when clicked again
+      it('changes visibility when the menu icon is clicked and does it hide when clicked again', function() {
+
+        const menuIcon = document.querySelector('i.icon-list');
+        const body = document.querySelector('body');
+
+        menuIcon.click();
+        expect(body.className).not.toContain('menu-hidden');
+
+        menuIcon.click();
+        expect(body.className).toContain('menu-hidden');
+      });
+    });
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
