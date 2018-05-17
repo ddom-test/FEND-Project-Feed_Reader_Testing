@@ -74,16 +74,15 @@ $(function() {
 
     describe('The menu', function() {
 
-      // Ensures the menu element is hidden by default
+      // Ensures that the menu element is hidden by default
       it('element is hidden by default', function() {
-          let body = document.querySelector('body');
 
+          let body = document.querySelector('body');
           expect(body.className).toContain('menu-hidden');
       });
 
-      // Ensures that the menu changes visibility
-      // when the menu icon is clicked and does it hide
-      // when clicked again
+      // Ensures that the menu changes visibility when the menu icon is clicked
+      //  and does it hide when clicked again
       it('changes visibility when the menu icon is clicked and does it hide when clicked again', function() {
 
         const menuIcon = document.querySelector('i.icon-list');
@@ -156,6 +155,7 @@ $(function() {
       // the content actually changes
       it('when a new feed is loaded the content actually changes', function () {
 
+        console.log("Before: \n\n", contentBefore, "\n\n", "After: \n\n", contentAfter);
         expect(contentBefore).not.toBe(contentAfter);
       });
     });
