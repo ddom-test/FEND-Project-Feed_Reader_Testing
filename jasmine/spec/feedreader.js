@@ -70,6 +70,16 @@ $(function() {
       it('element is hidden by default', function() {
 
           let body = document.querySelector('body');
+
+
+          // Documentation:
+          // toContain(expected)
+          // 'expect' the actual value to contain a specific value.
+
+          // For instance:
+          // expect(array).toContain(anElement);
+          // expect(string).toContain(substring);
+
           expect(body.className).toContain('menu-hidden');
       });
 
