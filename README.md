@@ -1,17 +1,21 @@
+
 # Feed Reader Testing FEND project
 
 ## Table of Contents
 
 * [Overview](#overview)
+* [Instructions](#instructions)
 * [Description](#description)
 * [Version](#version)
 * [Contributing](#contributing)
 
 ## Overview
 
-This project is part of the Front-End Web Developer Nanodegree Program. Given a web-based application that reads RSS feeds, the purpose is to write tests using the Jasmine framework. You can see tests' outcome opening index.html in a normal web browser!
+This project is part of the Front-End Web Developer Nanodegree Program. Given a web-based application that reads RSS feeds, the purpose is to write tests using the Jasmine framework.
 
+## Instructions
 
+Download the pachage from this git repository and open the index.html file to see the outcome of the tests. Requirements: your browser!
 
 ## Description
 
