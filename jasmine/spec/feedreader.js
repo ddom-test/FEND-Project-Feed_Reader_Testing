@@ -120,8 +120,8 @@ $(function() {
       // there is at least a single .entry element within the .feed container
       it('the LoadFeed function was called and completed its work. The .feed container is not empty', function () {
 
-        const feedContainer = document.querySelector('.feed');
-        expect(feedContainer.childNodes.length).toBeGreaterThan(0);
+        const feedContainer = document.querySelector('.feed .entry-link');
+        expect(feedContainer).not.toBeNull();
       });
     });
 
