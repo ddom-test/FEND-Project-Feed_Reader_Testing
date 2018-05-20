@@ -71,16 +71,7 @@ $(function() {
 
           let body = document.querySelector('body');
 
-
-          // Documentation:
-          // toContain(expected)
-          // 'expect' the actual value to contain a specific value.
-
-          // For instance:
-          // expect(array).toContain(anElement);
-          // expect(string).toContain(substring);
-
-          expect(body.className).toContain('menu-hidden');
+          expect($('body').hasClass('menu-hidden')).toBe(true);
       });
 
       // Ensures that the menu changes visibility when the menu icon is clicked
@@ -92,9 +83,9 @@ $(function() {
 
         menuIcon.click();
         expect(body.className).not.toContain('menu-hidden');
-
+ 
         menuIcon.click();
-        expect(body.className).toContain('menu-hidden');
+        expect($('body').hasClass('menu-hidden')).toBe(true);
       });
     });
 
