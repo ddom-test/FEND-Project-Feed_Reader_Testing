@@ -82,8 +82,8 @@ $(function() {
         const body = document.querySelector('body');
 
         menuIcon.click();
-        expect(body.className).not.toContain('menu-hidden');
- 
+        expect($('body').hasClass('menu-hidden')).not.toBe(true);
+
         menuIcon.click();
         expect($('body').hasClass('menu-hidden')).toBe(true);
       });
