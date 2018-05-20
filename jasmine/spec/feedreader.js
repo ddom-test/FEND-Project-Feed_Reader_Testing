@@ -71,6 +71,7 @@ $(function() {
 
           let body = document.querySelector('body');
 
+          // For more reference: https://api.jquery.com/hasclass/
           expect($('body').hasClass('menu-hidden')).toBe(true);
       });
 
